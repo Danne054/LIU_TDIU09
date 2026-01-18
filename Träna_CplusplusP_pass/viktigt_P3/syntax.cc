@@ -1,0 +1,70 @@
+cin.ignore(1000, '\n');
+
+getline(cin, StrVarible);
+
+cin.get(c);
+
+static_cast<double>();
+static_cast<int>();
+
+bool done{};
+string user_input{};
+  
+do
+  {
+    cin >> user_input;
+    done = (user_input == "DONE");
+
+    if (!done)
+      {
+	StrVector.push_back(user_input);
+      }
+  }
+ while (!done);
+  
+cin.ignore(1000, '\n');
+
+for (size_t i{}; i < TmpVector.size(); ++ i);
+{
+
+}
+
+setfill(c);
+
+setw(3);
+
+for (int i{static_cast<int>(TmpVector.size())};  i >= 0; i--)
+  {
+
+  }
+
+//styr antal decimaler
+
+
+//20*20 char vector av '.'
+using Painting_Type = vector<vector<char>>;
+Painting_Type blank_canvas(20 , vector<char>(20, '.'));
+
+
+  for (int y{}; y < 20; ++y)
+    {
+      for (int x{}; x < 20; ++x)
+	{
+	  cout <<  painting.at(y).at(x);
+	}
+      cout << '\n';
+    }
+  
+  cout << flush;
+
+
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+
+#include <cctype>
+
+//blanda ej size_t och int

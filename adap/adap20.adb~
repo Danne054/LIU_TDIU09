@@ -1,0 +1,86 @@
+with Ada.Integer_Text_IO;   use Ada.Integer_Text_IO;
+with Ada.Float_Text_IO;     use Ada.Float_Text_IO;
+with Ada.Text_IO;           use Ada.Text_IO;
+
+procedure Adap20 is 
+   -------------deluppgift 1----------------------------------------------
+   function "/" (LHV: in Integer;
+		 RHV: in Float) return Float is
+   begin
+      
+      return Float'Floor(FLoat(LHV) / RHV );
+   end "/";
+   
+   -------------deluppgift 2----------------------------------------------
+   function Find_Min(FloatA, FloatB, FloatC : in  Float) return Float is
+       FloatMin : Float := FloatC; 
+   begin 
+      
+      if FloatA < FloatMin then
+	 FloatMin := FloatA;
+      end if;
+      
+      if FloatB < FloatMin then
+	 FloatMin := FLoatB;
+      end if; 
+      
+      return FloatMin;
+   end Find_Min;
+   
+   -------------deluppgift 3----------------------------------------------
+   procedure Square_Area_Calculator(SideLenght : in Float;
+                                    SquareArea : out Float) is
+   begin
+      
+      SquareArea := SideLenght * SideLenght;
+   end Square_Area_Calculator;
+   
+   ----------------------------------------------------------------------- 
+   Integer_Dividend : Integer; 
+   Float_Divisor    : Float;
+   
+   ValMinA, ValMinB ,ValMinC : Float;
+   
+   SideLenght : Float;
+   SquareArea : Float;
+   
+begin
+   -------------deluppgift 1----------------------------------------------
+   Put("Mata in ett heltal: ");
+   Get(Integer_Dividend);
+   Skip_Line;
+   
+   Put("Mata in ett flyttal: ");
+   Get(Float_Divisor);
+   Skip_Line;
+   
+   Put("Den beräknade kvoten mellan ");
+   Put(Integer_Dividend, Width => 0);
+   Put(" och ");
+   Put(Float_Divisor, Fore => 0, Aft => 0, Exp =>0);
+   Put(" blir ");
+   Put(Integer_Dividend / Float_Divisor, Fore => 0, Aft => 0, Exp =>0);
+   New_Line(2);
+   
+   -------------deluppgift 2----------------------------------------------
+   Put("Mata in tre flyttal: ");
+   Get(ValMinA);
+   Get(ValMinB);
+   Get(ValMinC);
+   Skip_Line;
+   
+   Put("Det minsta värdet av dessa är: ");
+   Put(Find_Min(ValMinA, ValMinB, ValMinC), Fore => 0, Aft => 0, Exp =>0);
+   New_Line(2);
+   
+   -------------deluppgift 3----------------------------------------------
+   Put("Mata in längden: ");
+   Get(SideLenght);
+   Skip_Line;
+   
+   Square_Area_Calculator(SideLenght, SquareArea);
+   
+   Put("Den beräknade arean blev: ");
+   Put(SquareArea, Fore => 0, Aft => 0, Exp =>0);
+   -----------------------------------------------------------------------  
+end Adap20;

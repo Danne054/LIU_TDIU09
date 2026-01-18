@@ -1,0 +1,30 @@
+with Ada.Integer_Text_IO;   use Ada.Integer_Text_IO;
+with Ada.Float_Text_IO;     use Ada.Float_Text_IO;
+with Ada.Text_IO;           use Ada.Text_IO;
+
+procedure adap3 is 
+  
+   
+   
+   subtype Char_Range is 
+     Character range '5'..'9';
+     
+   type Golf_Type is 
+     array (Char_Range) of string(1..5);
+   
+   
+ 
+   
+   
+   
+   A : Golf_Type;
+   
+begin
+   for I in A'Range loop 
+      
+      A(I) := "00000";
+      Put(A(I));
+   end loop;
+   
+
+end adap3;

@@ -1,0 +1,96 @@
+#include <vector>
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <cctype>
+#include <algorithm>
+using namespace std;
+using Painting_Type = vector<vector<char>>;
+
+struct paint
+{
+  int row, colum, width;
+  char fill;
+};
+
+using input_Paint_Type = vector<paint>;
+
+void add_paint(Painting_Type & painting,
+	       paint const& paint_here)
+{
+  int offset_y{paint_here.row -1};
+  int offset_x{paint_here.colum -1};
+  int y_start{offset_y - paint_here.width}, x_start{offset_x - paint_here.width};
+  int y_end{offset_y + paint_here.width}, x_end{offset_x + paint_here.width};
+  
+  if (y_start < 0)
+    {
+      y_start = 0;
+    }
+  if (x_start < 0)
+    {
+      x_start = 0;
+    }
+  if (y_end > 19)
+    {
+      y_end = 19;
+    }
+  if (x_end > 19)
+    {
+      x_end = 19;
+    }
+  
+  for (int y{y_start}; y <= (y_end); ++y)
+    {
+      for (int x{x_start}; x <= (x_end); ++x)
+	{
+	  painting.at(y).at(x) = paint_here.fill;
+	}
+    }
+}
+  
+void get_painting(Painting_Type & painting)
+{
+  input_Paint_Type user_input;
+  paint get;
+
+  
+  while(cin >> get.row >> get.colum >> get.width and cin.get() and cin.get(get.fill))
+    {
+      user_input.push_back(get);
+    }
+
+  painting.assign(20, vector<char>(20, '.'));
+  
+  for (int i{static_cast<int>(user_input.size())-1}; i >= 0; --i)
+    {
+      add_paint(painting, user_input.at(i));
+    }
+}
+
+void print_painting(Painting_Type const& painting)
+{
+
+  for (size_t y{}; y < painting.size(); ++y)
+    {
+      for (size_t x{}; x <  painting.size(); ++x)
+	{
+	  cout << painting.at(y).at(x);
+	}
+      
+      cout << endl;
+    }
+}
+
+int main()
+{
+  Painting_Type painting;
+
+  cout << "Enter squares:" << endl;
+  get_painting(painting);
+  
+  cout << "Painting:" << endl;
+  print_painting(painting);
+
+  return 0;
+}

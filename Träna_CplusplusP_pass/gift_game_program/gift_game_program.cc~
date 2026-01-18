@@ -1,0 +1,61 @@
+#include<iostream>
+#include<iomanip>
+#include<cctype>
+#include<vector>
+#include<string>
+
+using namespace std;
+
+struct Name_Gift_Type
+{
+  string name{}, gift{};
+};
+
+using Gift_Game_Type = vector<Name_Gift_Type>;
+
+void get(Gift_Game_Type & gifts)
+{
+  Name_Gift_Type person;
+  char c;
+  
+  while (cin >> person.name and cin.get(c) and getline(cin, person.gift))
+    {
+      gifts.push_back(person);
+    }
+}
+
+void print_result(Gift_Game_Type & gifts,
+		  int      const&  steps)
+{
+  Name_Gift_Type empty;
+  int gift_from_index{};
+  
+  for (size_t i{}; i < gifts.size(); ++i)
+    {
+      gift_from_index = ((steps + i)%gifts.size());
+      
+      cout << gifts.at(i).name << " got "
+	   << '"' << gifts.at(gift_from_index).gift << '"'
+	   << " from " << gifts.at(gift_from_index).name << '\n';
+    }
+    
+  cout << flush;
+}
+
+int main()
+{
+  int steps;
+  Gift_Game_Type gifts;
+  
+  cout << "Enter steps: ";
+  cin >> steps;
+  cin.ignore(1000, '\n');
+
+  cout << "Enter names and gifts:" << endl;
+  get(gifts);
+
+  cout << "Gift game result:" << endl;
+  print_result(gifts, steps);
+  
+  return 0;
+}

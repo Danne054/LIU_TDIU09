@@ -1,0 +1,169 @@
+with Ada.Integer_Text_IO;   use Ada.Integer_Text_IO;
+with Ada.Text_IO;           use Ada.Text_IO;
+
+procedure T_Adap30 is 
+   
+   --subtyper
+   subtype Inner_Array_Subype is
+     Integer range -66..-64;
+   
+   subtype Outher_Array_Subype_1 is
+     Character range 'C'..'E';
+   
+   subtype Outher_Array_Subype_2 is
+     Integer range 40..43;
+   
+   --typer
+   type Post_Type is 
+      record 
+	 P : String(1..2);
+	 T : Integer;
+      end record;
+   
+   type Inner_Array_Type is
+     array (Inner_Array_Subype) of Post_Type;
+   
+   type Outher_Array_Type is
+     array (Outher_Array_Subype_1, Outher_Array_Subype_2) of Inner_Array_Type;
+   
+   --get
+   procedure Get(Item : out Post_Type) is 
+      
+      Empty: Character;
+   begin   
+      
+      Get(Item.P);
+      Get(Empty);
+      Get(Item.T);
+   end Get;
+   
+   procedure Get(Item : out Inner_Array_Type) is 
+      
+      Empty: Character;
+   begin   
+      
+      for I in Item'Range loop
+	 
+	 Get(Item(I));
+	 
+	 if I /= Item'Last then
+	    
+	    Get(Empty);
+	    
+	 end if;
+      end loop;
+   end Get;
+   
+   procedure Get(Item : out Outher_Array_Type) is 
+      
+      Empty: Character;
+   begin   
+      
+      for Y in reverse Item'Range(2) loop
+	 for X in Item'Range(1) loop
+	    
+	    Get(Item(X, Y));
+	    
+	    if (X /= Item'Last(1)) then
+	       Get(Empty);
+	    end if; 	 
+	 end loop;
+	 
+	 if (Y /= Item'First(2)) then
+	    Get(Empty);
+	 end if;
+      end loop;
+   end Get;
+   
+   --put--
+   procedure put(Item : in Post_Type) is 
+      
+   begin   
+      
+      put(Item.P);
+      put(' ');
+      put(Item.T, Width => 0);
+   end put;
+   
+   procedure put(Item : in Inner_Array_Type) is 
+      
+   begin   
+      
+      for I in Item'Range loop
+	 
+	 put(' ');
+	 put(Item(I)); 
+      end loop;
+   end put;
+   
+   procedure put(Item : in Outher_Array_Type) is 
+      
+   begin   
+      
+      for Y in reverse Item'Range(2) loop
+	 for X in Item'Range(1) loop
+	    
+	    put(Item(X, Y));
+	    
+	    --  if (Y = Item'First(2)) and (X = Item'Last(1)) then
+	    --     Put(' ');
+	    --     Put(Item'Last(1));
+	    --     Put(' ');
+	    --     Put(X);
+	    --     Put(' ');
+	    --     Put(Item'First(2), Width => 0);
+	    --     Put(' ');
+	    --     Put(Y, Width => 0);
+	    --  end if;
+	 end loop;
+	 
+      end loop;
+   end Put;
+   
+   --put_k
+   --  procedure Put_k(Item : in Inner_Array_Type) is 
+      
+   --  begin   
+      
+   --     for I in Item'Range loop
+	
+
+   --  	 put(I, Width => 0); 
+   --  	 put(' ');
+   --     end loop;
+   --  end Put_k;
+   
+   --  procedure Put_k(Item : in Outher_Array_Type) is 
+      
+   --  begin   
+      
+   --     for Y in reverse Item'Range(2) loop
+   --  	 for X in Item'Range(1) loop
+	    
+   --  	    Put(X);
+   --  	    Put(',');
+   --  	    Put(Y, Width => 0);
+   --  	    put(' ');
+   --  	    put('(');
+   --  	    Put_k(Item(X, Y));
+   --  	    put(')');
+   --  	 end loop;
+	 
+   --     end loop;
+   --  end Put_k;
+   
+   --  Test_Post : Post_Type;
+   --  Test : Inner_Array_Type;
+   T : Outher_Array_Type;
+   
+begin 
+   Put("Mata in datamängd: ");
+   Get(T);
+   Skip_Line;
+   
+   Put("Inmatad datamängd:");
+   Put(T);
+   
+   New_Line(2);
+   Put_k(T);
+end T_Adap30;

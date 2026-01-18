@@ -1,0 +1,14 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+  Overhead_Map_Type map;
+  
+  read_overhead_map(map);
+  cout << "Number of houses with at least one mailbox: "
+       << count_houses_with_mailboxes(map) << "." << endl;
+  
+  return 0;
+}

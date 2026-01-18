@@ -1,0 +1,178 @@
+// danba623: Samarbetat med joese138, Joel Sevén, samma program
+
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <cmath>
+#include <cctype>
+using namespace std;
+
+int main()
+{
+  //varibler del1
+  int age;
+  double shoe_size;
+  char c;
+  string lastName;
+  
+  //varibler del2
+  int start_value;
+  int end_value;
+  string uppg3;
+
+  //varibler del3
+  int digits{0};
+  int letters{0};
+  int whitespace{0};
+
+  //varibler del4
+  string inString;
+  string longest;
+  string shortest;
+  int ord{1};
+  int word_count{0};
+  
+  //del1
+  cout << "Del 1: In- och utmatning" <<  '\n'
+       << "Mata in din ålder och skostorlek: " << flush;
+  cin  >> age >> shoe_size;
+  cin.ignore(1000, '\n');
+  
+  cout << "Mata in första bokstaven i ditt namn: " << flush;
+  cin  >> c;
+  cin.ignore(1000, '\n');
+  
+  cout << "Mata in ditt efternamn: " << flush;
+  getline(cin, lastName);
+  
+  cout << "Hej " << c << ". " << lastName << "!" <<'\n'
+       << "Din ålder:" << setw(10) << age << '\n'
+       << "Din skostorlek:" << setw(5)
+       << fixed << setprecision(1) << shoe_size << '\n' << endl;
+
+  //del2
+  cout << "Del 2: Temperaturtabell" << endl;
+  
+  do 
+    {
+      cout << "Ange startvärde: " << flush;
+      cin  >> start_value;
+      cin.ignore(1000, '\n');
+      
+      if (start_value < -273.15)
+	{
+	  cout << "Felaktigt startvärde!" << endl;
+	}
+      else
+	{
+	  break;
+	}
+    }
+  while (true);
+  
+
+  do
+    {
+      cout << "Ange slutvärde: " << flush;
+      cin  >> end_value;
+      cin.ignore(1000, '\n');
+      
+      if (start_value > end_value)
+	{
+	  cout << "Felaktigt slutvärde!" << endl;
+	}
+      else
+	{
+	  break;
+	}
+    }
+  while (true);
+
+  cout << "Celsius   Kelvin    Fahrenheit   Reaumur" << '\n'
+       <<"----------------------------------------" << endl;
+  for (int i {}; i < ((end_value - start_value) + 1 ); ++i)
+    {
+      cout << setw(7) << start_value + i
+	   << setw(9) << fixed << setprecision(2)
+	   << (static_cast<double>(start_value) + static_cast<double>(i)) + 273.15
+	   << setw(14) << fixed << setprecision(2)
+	   << ((double)start_value + static_cast<double>(i)) * 1.8 + 32.0
+	   << setw(10) << fixed << setprecision(2)
+	   << (static_cast<double>(start_value) + static_cast<double>(i)) * 0.8 << endl;
+    }
+
+  cout << endl;
+
+  //del3
+  cout << "Del 3: Teckenhantering" << endl;
+  
+  for (int i {}; i < 10; ++i)
+    {
+      cin.get(c);
+      
+      if (isdigit(c))
+	{
+	  digits++;
+	}
+      else if (isalpha(c))
+	{
+	  letters++;
+	}
+      else if (isspace(c))
+	{
+	  whitespace++;
+	}
+    }
+  
+  cin.ignore(1000, '\n');
+  
+  cout << "Mata in utfyllnadstecken: " << flush;
+  cin.get(c);
+  cin.ignore(1000, '\n');
+  cout << "Alfabetiska tecken:" << setfill(c) << setw(3) << letters << '\n'
+       << "Siffertecken:" << setfill(c) << setw(9) << digits << '\n'
+       << "Vita tecken:" << setfill(c) << setw(10) << whitespace
+       << '\n' << endl;
+
+  //del4
+  cout << "Del 4: Ordhantering" << endl;
+
+  cin >> inString;
+  shortest = inString;
+  longest = inString;
+  word_count = inString.length();
+  
+  while (cin >> inString)
+    {
+      word_count = word_count + inString.length();
+      ord++;
+      
+      if (inString.length() > longest.length())
+	{
+	  longest = inString;
+	}
+      
+      if (inString.length() < shortest.length())
+	{
+	  shortest = inString;
+	}
+    }
+  
+  if (inString == "")
+    {
+      cout << "Inga ord matades in." << endl;
+    }
+  else
+    {
+      
+      cout << "Texten innehöll " << ord << " ord." << '\n'
+	   << "Kortaste ordet: " << '"' << shortest << '"'
+	   << " (" << shortest.length() << " tecken)." << '\n'
+	   << "Längsta ordet: " << '"' << longest << '"'
+	   << " (" << longest.length() << " tecken)." << '\n'
+           <<"Medelordlängd: " << fixed << setprecision(1)
+	   << (static_cast<double>(word_count) / static_cast<double>(ord)) << " tecken." << endl;
+    }
+}
+
+    

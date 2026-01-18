@@ -1,0 +1,85 @@
+V "GNAT Lib v10"
+M P W=b
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_IO
+RV SPARK_05
+
+U t1_adap30%b		t1_adap30.adb		1bdd71ae NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+
+D ada.ads		20230707070819 76789da1 ada%s
+D a-except.ads		20230707070819 a7106115 ada.exceptions%s
+D a-inteio.ads		20230707070819 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20230707070819 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20230707070819 119b8fb3 ada.streams%s
+D a-tags.ads		20230707070819 491b781d ada.tags%s
+D a-textio.ads		20230707070819 aef4d56d ada.text_io%s
+D a-tiinio.ads		20230707070819 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20230707070819 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20230707070819 5ab55268 interfaces%s
+D i-cstrea.ads		20230707070819 e53d8b8e interfaces.c_streams%s
+D system.ads		20230707070819 4635ec04 system%s
+D s-crtl.ads		20230707070819 0ebbdb71 system.crtl%s
+D s-exctab.ads		20230707070819 54135002 system.exception_table%s
+D s-ficobl.ads		20230707070819 078245e4 system.file_control_block%s
+D s-parame.ads		20230707070819 48ec542b system.parameters%s
+D s-secsta.ads		20230707070819 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20230707070819 a7318a92 system.soft_links%s
+D s-stache.ads		20230707070819 a37c21ec system.stack_checking%s
+D s-stalib.ads		20230707070819 09bd3940 system.standard_library%s
+D s-stoele.ads		20230707070819 2dc34a04 system.storage_elements%s
+D s-traent.ads		20230707070819 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20230707070819 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20230707070819 1b7d22d2 system.wch_con%s
+D t1_adap30.adb		20251020183441 43622d67 t1_adap30%b
+G a e
+G c Z b b [t1_adap30 standard 5 11 none]
+X 1 ada.ads
+16K9*Ada 20e8 25|2r6 2r33 3r6 3r33
+X 3 a-inteio.ads
+18K13*Integer_Text_IO[8|46] 25|3w10 3r37
+X 7 a-textio.ads
+57K13*Text_IO 727e16 25|2w10 2r37
+273U14*Skip_Line 25|114s4
+381U14*Get 25|40s16 55s13 66s7
+392U14*Put 25|82s16 96s13 106s7
+454U14*Get 25|37s13
+465U14*Put 25|79s13 112s4 116s4
+X 25 t1_adap30.adb
+5U11*T1_Adap30 5b11 118l5 118t14
+8I12 Inner_Array_Range1{integer} 19r13
+11I12 Inner_Array_Range2{integer} 19r33
+14I12 Outer_Array_Range{integer} 22r13
+18A9 Inner_Array_Type(string)<integer><integer> 22r35 30r29 71r28
+21A9 Oter_Array(18A9)<integer> 26r17 46r29 88r28
+24R9 Post_Type 27e17 60r29 101r28 110r8
+26a10 N{21A9} 67m16 107r16
+26a13 G{21A9} 65m16 105r16
+30U14 Get 30b14 30<18 44l8 44t11 52s10
+30a18 Item{18A9} 35r16 36r27 37m17 37r17 39r25 39r47
+32e7 Empty{character} 40m20
+35i11 Y{integer} 37r25 39r43
+36i14 X{integer} 37r22 39r21
+46U14 Get 46b14 46<18 58l8 58t11 65s7 67s7
+46a18 Item{21A9} 51r24 52m14 52r14 54r18
+48e7 Empty{character} 55m17
+51i11 I{integer} 52r19 54r13
+60U14 Get 60b14 60<18 68l8 68t11 113s4
+60r18 Item{24R9} 65m11 65r11 67m11 67r11
+62e7 Empty{character} 66m11
+71U14 put 71b14 71>18 86l8 86t11 93s10
+71a18 Item{18A9} 75r16 77r27 79r17 81r25 81r47
+75i11 Y{integer} 79r25 81r43
+77i14 X{integer} 79r22 81r21
+88U14 Put 88b14 88>18 99l8 99t11 105s7 107s7
+88a18 Item{21A9} 92r24 93r14 95r18
+92i11 I{integer} 93r19 95r13
+101U14 Put 101b14 101>18 108l8 108t11 117s4
+101r18 Item{24R9} 105r11 107r11
+110r4 T{24R9} 113m8 117r8
+

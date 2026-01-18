@@ -1,0 +1,173 @@
+
+with Ada.Text_IO;              use Ada.Text_IO;
+with Ada.Integer_Text_IO;      use Ada.Integer_Text_IO;
+with Ada.Float_Text_IO;           use Ada.Float_Text_IO;
+with Ada.Numerics.Elementary_Functions; use Ada.Numerics.Elementary_Functions;
+with Ada.Numerics; use Ada.Numerics;
+
+procedure Trig_Fakultet_Reknare is
+   
+   procedure Huvudmeny is
+   begin
+      New_Line;
+      Put("=== HUVUDMENY ===");
+      
+      New_Line;
+      Put("1. Beräkna hypotenusa");
+      
+      New_Line;
+      Put("2. Beräkna triangelvinklar");
+      
+      New_Line;
+      Put("3. Beräkna N-fakultet");
+      
+      New_Line;
+      Put("4. Avsluta programmet");
+      
+   end Huvudmeny;
+   
+   
+   
+   --behandling av hypotinusa
+   ----------------------------------------------------------------------------------------
+   function HypotenusaBerekning(K1, K2: Float) return Float is
+   begin
+      
+      return Sqrt(K1**2 +K2**2);
+   end HypotenusaBerekning;
+   
+   
+   
+   procedure Hypotenusa is
+      Katet1, Katet2 : Float;
+   begin
+      Put("Mata in kateternas längder: ");
+      Get(Katet1);
+      Get(Katet2);
+      
+      Skip_Line;
+      Put("Hypotenusan är ");
+   
+      Put(HypotenusaBerekning(Katet1, Katet2), Fore => 1, aft => 2, Exp => 0);
+   end Hypotenusa;
+   -------------------------------------------------------------------------------------------
+   
+   
+   
+   --behandling av triangel vinklar 
+   -------------------------------------------------------------------------------------------
+   Procedure VinklarUtreckning(Vin1, Vin2, Vin3, Hypotenusa, Katet: in out Float) is
+     
+   begin 
+      Vin1 := (180.0/Pi)*(Arcsin(katet /Hypotenusa)); 
+      Vin2 := Vin3 - Vin1;
+   
+   end VinklarUtreckning;
+     
+     
+   
+   procedure Vinklar is
+      Hypotenusa, Katet: Float;
+      Vin1, Vin2, Vin3: Float:= 90.0;
+   begin
+      Put("Mata in hypotenusans längd: ");
+      Get(Hypotenusa);
+      Skip_Line;
+      
+      Put("Mata in vertikala katetens längd: ");
+      Get(Katet);
+      Skip_Line;
+
+      VinklarUtreckning(Vin1, Vin2, Vin3, Hypotenusa, Katet);
+      
+      Put("Va: ");
+      Put(Vin1, Fore => 1, aft => 1, Exp => 0);
+      Put(" grader");
+      New_Line;
+      
+      Put("Vb: ");
+      Put(Vin2, Fore => 1, aft => 1, Exp => 0);
+      Put(" grader");
+      New_Line;
+      
+      Put("Vc: ");
+      Put(Vin3, Fore => 1, aft => 1, Exp => 0);
+      Put(" grader");
+   end Vinklar;
+   ------------------------------------------------------------------------------------------------
+   
+   
+   --behandling av fakultet
+   ------------------------------------------------------------------------------------------------
+   function BerekanFakulte(N: Integer) return Natural is
+      Result: Natural:= 1;
+      
+   begin
+      
+     for I in 2 .. N loop
+         Result := Result * I;
+     end loop;
+     
+     return Result;
+   end BerekanFakulte;
+   
+   
+   procedure Fakultet is
+      N: Integer;
+      
+   begin
+      Put("Mata in N: ");
+      Get(N);
+      
+      Put(N, Width => 0);
+      Put("-fakultet = ");
+      Put(BerekanFakulte(N), width => 0);
+      
+   end Fakultet;
+   -------------------------------------------------------------------------------------------------
+   
+   
+   
+   I: Integer;
+begin
+   
+   Put("Välkommen till miniräknaren!");
+   Huvudmeny;
+   
+   loop
+      New_Line;
+      Put("Val: ");
+      Get(I);
+      Skip_Line;
+      
+      if I = 1 then
+	 Hypotenusa;
+	 New_Line(1);
+	 Huvudmeny;
+	 
+      elsif I = 2 then
+	 Vinklar;
+	 New_Line(1);
+	 Huvudmeny;
+	 
+      elsif I = 3 then
+	 Fakultet;
+	 New_Line(1);
+	 Huvudmeny;
+	 
+      elsif I = 4 then
+	 Put("Ha en bra dag!");
+	 exit;
+      
+      else
+	 Put("Felaktigt val!");
+	 
+      end if;
+      
+   end loop;
+end Trig_Fakultet_Reknare;
+
+
+--Mr robot
+--HelloWorld("print")
+--alright buddy

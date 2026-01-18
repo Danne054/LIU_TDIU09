@@ -1,0 +1,116 @@
+V "GNAT Lib v10"
+M P W=b
+P ZX
+
+RN
+RV NO_FLOATING_POINT
+RV NO_IO
+RV NO_DEFAULT_INITIALIZATION
+RV SPARK_05
+
+U ada031%b		ada031.adb		47d206a6 NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+
+D ada.ads		20230707070819 76789da1 ada%s
+D a-except.ads		20230707070819 a7106115 ada.exceptions%s
+D a-flteio.ads		20230707070819 e18a47a0 ada.float_text_io%s
+D a-inteio.ads		20230707070819 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20230707070819 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20230707070819 119b8fb3 ada.streams%s
+D a-tags.ads		20230707070819 491b781d ada.tags%s
+D a-textio.ads		20230707070819 aef4d56d ada.text_io%s
+D a-tiflio.ads		20230707070819 bf196650 ada.text_io.float_io%s
+D a-tiinio.ads		20230707070819 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20230707070819 0e9b276f ada.unchecked_conversion%s
+D ada031.adb		20251013110512 fee71dcf ada031%b
+D interfac.ads		20230707070819 5ab55268 interfaces%s
+D i-cstrea.ads		20230707070819 e53d8b8e interfaces.c_streams%s
+D system.ads		20230707070819 4635ec04 system%s
+D s-crtl.ads		20230707070819 0ebbdb71 system.crtl%s
+D s-exctab.ads		20230707070819 54135002 system.exception_table%s
+D s-ficobl.ads		20230707070819 078245e4 system.file_control_block%s
+D s-parame.ads		20230707070819 48ec542b system.parameters%s
+D s-secsta.ads		20230707070819 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20230707070819 a7318a92 system.soft_links%s
+D s-stache.ads		20230707070819 a37c21ec system.stack_checking%s
+D s-stalib.ads		20230707070819 09bd3940 system.standard_library%s
+D s-stoele.ads		20230707070819 2dc34a04 system.storage_elements%s
+D s-traent.ads		20230707070819 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20230707070819 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20230707070819 1b7d22d2 system.wch_con%s
+G a e
+G c Z b b [ada031 standard 8 11 none]
+X 1 ada.ads
+16K9*Ada 20e8 12|3r6 3r33 4r6 4r33 5r6 5r33
+X 3 a-flteio.ads
+20K13*Float_Text_IO[9|46] 12|4w10 4r37
+X 4 a-inteio.ads
+18K13*Integer_Text_IO[10|46] 12|3w10 3r37
+X 8 a-textio.ads
+57K13*Text_IO 727e16 12|5w10 5r37
+86I12*Field{integer}
+264U14*New_Line 12|192s4 199s4 202s4 209s4 212s4
+273U14*Skip_Line 12|195s4 205s4 215s4
+381U14*Get 12|64s7 65s7 76s7 78s7 81s7 91s7 92s7 93s7 103s7 106s7 108s7 116s7
+. 117s7
+392U14*Put 12|137s7 138s7 148s7 150s7 153s7 162s7 163s7 164s7 174s7 176s7
+. 180s7 181s7
+454U14*Get 12|66s7 77s7 82s7
+465U14*Put 12|126s10 128s10 139s7 149s7 154s7 191s4 193s4 197s4 201s4 203s4
+. 207s4 211s4 213s4 217s4
+X 9 a-tiflio.ads
+60U14*Get 12|75s7[3|20] 80s7[3|20]
+82U14*Put 12|147s7[3|20] 152s7[3|20]
+84i7 Fore{8|86I12} 12|147r21[3|20] 152r21[3|20]
+85i7 Aft{8|86I12} 12|147r32[3|20] 152r32[3|20]
+86i7 Exp{8|86I12} 12|147r42[3|20] 152r42[3|20]
+X 12 ada031.adb
+8U11*Ada031 8b11 219l5 219t11
+11R9 DS1_Type 16e17 59r29 133r28 185r10
+14e10 W{character} 64m16 137r16
+15a10 P{string} 66m16 139r16
+19R9 Float_String_Type 24e17 30r14 31r14
+22f10 S{float} 75m18 80m18 147r18 152r18
+23a10 Z{string} 77m18 82m18 149r18 154r18
+27R9 DS2_Type 32e17 70r29 143r28 186r10
+30r10 D{19R9} 75m16 77m16 147r16 149r16
+31r10 U{19R9} 80m16 82m16 152r16 154r16
+35R9 Char_Record_Type 39e17 53r14 54r14 86r29 158r28
+38e10 Y{character} 91m16 162r16
+38e13 Q{character} 93m16 164r16
+42R9 Bool_Char_Record_Type 47e17 55r14
+45b10 T{boolean} 111m17 113m17 179r18
+46e10 L{character} 117m18 181r18
+50R9 DS3_Type 56e17 97r29 168r28 187r10
+53r10 J{35R9} 102m16 173r16
+54r10 B{35R9} 105m16 175r16
+55r10 O{42R9} 111m15 113m15 117m16 179r16 181r16
+59U14 Get 59b14 59<18 67l8 67t11 194s4
+59r18 Item{11R9} 64m11 64r11 66m11 66r11
+61e7 C{character} 65m11
+70U14 Get 70b14 70<18 83l8 83t11 204s4
+70r18 Item{27R9} 75m11 75r11 77m11 77r11 80m11 80r11 82m11 82r11
+72e7 C{character} 76m11 78m11 81m11
+86U14 Get 86b14 86<18 94l8 94t11 102s7 105s7
+86r18 Item{35R9} 91m11 91r11 93m11 93r11
+88e7 C{character} 92m11
+97U14 Get 97b14 97<18 118l8 118t11 214s4
+97r18 Item{50R9} 102m11 102r11 105m11 105r11 111m10 113m10 117m11 117r11
+99e7 C{character} 103m11 106m11 108m11 110r10 112r13 116m11
+121U14 Put 121b14 121>18 130l8 130t11 179s7
+121b18 Item{boolean} 125r10
+133U14 Put 133b14 133>18 140l8 140t11 198s4
+133r18 Item{11R9} 137r11 139r11
+143U14 Put 143b14 143>18 155l8 155t11 208s4
+143r18 Item{27R9} 147r11 149r11 152r11 154r11
+158U14 Put 158b14 158>18 166l8 166t11 173s7 175s7
+158r18 Item{35R9} 162r11 164r11
+168U14 Put 168b14 168>18 182l8 182t11 218s4
+168r18 Item{50R9} 173r11 175r11 179r11 181r11
+185r4 DS1{11R9} 194m8 198r8
+186r4 DS2{27R9} 204m8 208r8
+187r4 DS3{50R9} 214m8 218r8
+

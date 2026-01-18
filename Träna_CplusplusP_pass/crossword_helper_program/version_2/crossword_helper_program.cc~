@@ -1,0 +1,19 @@
+int main()
+{
+  Word_List_Type word_list;
+  Word_List_Type possible_words;
+  string crossword;
+  
+  cout << "Enter word list:" << endl;
+  get_word_list(word_list);
+
+  cout << "Enter crosswords:" << endl;
+  while(cin >> crossword)
+  {
+    possible_words = find_possible_words(crossword, word_list);
+    
+    cout << "Possible words for " << crossword << endl;
+    print_words(possible_words);
+  }
+  return 0;
+}

@@ -1,0 +1,110 @@
+#include<iostream>
+#include<vector>
+#include<string>
+
+//vector fylld med strängar, och input slut med ctrl-D
+using  Word_List_Type = vector<string>;
+
+void read(Word_List_Type & words)
+{
+  string user_input;
+    
+  while (cin >> user_input)
+    {
+      words.push_back(user_input);
+    }
+  
+  cin.ignore(1000, '\n');
+}
+
+//vector, fylld med en struct som innehåller två strängar, input avslutast med ctrl-D 
+
+struct Name_Gift_Type
+{
+  string name{}, gift{};
+};
+
+using Gift_Game_Type = vector<Name_Gift_Type>;
+
+void get(Gift_Game_Type & gifts)
+{
+  Name_Gift_Type person;
+  char c;
+  
+  while (cin >> person.name and cin.get(c) and getline(cin, person.gift))
+    {
+      gifts.push_back(person);
+    }
+  
+  cin.ignore(1000, '\n');
+}
+
+//
+
+struct Chips_And_Amount
+{
+  int chips_amount{};
+  string chips{};
+};
+
+using Chips_Input_List_Type = vector<Chips_And_Amount>;
+using Chip_Stack_Type = vector<string>;
+
+void read_chips(Chip_Stack_Type & chip_stack)
+{
+  int i{}, chips_max_amount{};
+  char c;
+  Chips_And_Amount chpis_data;
+  Chips_Input_List_Type chips_input_list;
+  
+  do
+    {
+      cout << "Chip bag " << ++i << ": " << flush;
+      cin >> chpis_data.chips_amount;
+
+      if (chpis_data.chips_amount > chips_max_amount)
+	{
+	  chips_max_amount = chpis_data.chips_amount;
+	}
+      
+      if (chpis_data.chips_amount != -1)
+	{
+	  cin.get(c);
+	  getline(cin, chpis_data.chips);
+	  
+	  chips_input_list.push_back(chpis_data);
+	}
+    }
+  while (chpis_data.chips_amount != -1);
+
+  cin.ignore(1000, '\n');
+  
+  sort_chips(chips_input_list, chip_stack, chips_max_amount);
+  chips_input_list.clear();
+}
+
+//
+using Overhead_Map_Type = vector<string>;
+
+void read_overhead_map(Overhead_Map_Type & map)
+{
+  string input_map_row;
+    
+  while (cin >> input_map_row)
+    {
+      map.push_back(input_map_row);
+    }
+  
+  cin.ignore(1000, '\n');
+}
+
+int main()
+{
+  Word_List_Type words;
+  
+  cout << "Enter words: ";
+  read(words);
+
+  cout << "Enter names and gifts:" << endl;
+  get(gifts);
+}

@@ -1,0 +1,110 @@
+#include <iostream>
+#include <vector>
+#include <iomanip>
+#include <string>
+#include <cctype>
+#include <algorithm>
+
+using namespace std;
+
+struct X_Y_Type
+{
+  int x{}, y{};
+};
+
+using char_vector = vector<char>;
+
+using Overhead_Map_Type = vector<char_vector>;
+
+int find_M_around_H(Overhead_Map_Type const& map,
+		      X_Y_Type const& H_cords)
+{
+  int y_start{H_cords.y - 2}, x_start{H_cords.x - 2};
+  int y_end{H_cords.y + 2}, x_end{};
+  int last_inde_y{static_cast<int>(map.size()) - 1};
+  int last_inde_x{};
+  
+  if (y_start < 0)
+    {
+      y_start = 0;
+    }
+  if (x_start < 0)
+    {
+      x_start = 0;
+    }
+  if (y_end > last_inde_y)
+    {
+      y_end = last_inde_y;
+    } 
+
+  for (int y{y_start}; y <= (y_end); ++y)
+    {
+      x_end = H_cords.x + 2;
+      last_inde_x = static_cast<int>(map.at(y).size()) - 1;
+      
+      if (x_end > last_inde_x)
+	{
+	  x_end = last_inde_x;
+	}
+      
+      for (int x{x_start}; x <= (x_end); ++x)
+	{
+	  if (map.at(y).at(x) == 'M')
+	    {
+	      return 1;
+	    }
+	}
+    }
+  return 0;
+}
+
+void read_overhead_map(Overhead_Map_Type & map)
+{
+  char inputcharacter;
+  char_vector temp_vector;
+
+  
+  while (cin.get(inputcharacter))
+    {
+      if (inputcharacter == '\n')
+	{
+	  map.push_back(temp_vector);
+	  temp_vector.clear();
+	}
+      else
+	{
+	  temp_vector.push_back(inputcharacter);
+	}
+    }
+}
+int count_houses_with_mailboxes(Overhead_Map_Type const& map)
+{
+  X_Y_Type H_cords;
+  int houses_with_mailbox{};
+  
+  for (size_t y{}; y < map.size(); ++y)
+    {
+      for (size_t x{}; x <  map.at(y).size(); ++x)
+	{
+	  if (map.at(y).at(x) == 'H')
+	    {
+	      H_cords.x = static_cast<int>(x);
+	      H_cords.y = static_cast<int>(y);
+	      houses_with_mailbox += find_M_around_H(map, H_cords);
+	    }
+	}
+    }
+  
+  return houses_with_mailbox;
+}
+
+int main()
+{
+  Overhead_Map_Type map;
+  
+  read_overhead_map(map);
+  cout << "Number of houses with at least one mailbox: "
+       << count_houses_with_mailboxes(map) << "." << endl;
+  
+  return 0;
+}

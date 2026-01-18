@@ -1,0 +1,18 @@
+
+int main()
+{
+  Word_List_Type words;
+  string search_phrase;
+
+  cout << "Enter search phrase: ";
+  cin >> search_phrase;
+  cin.ignore(1000, '\n');
+ 
+  cout << "Enter words: ";
+  read(words);
+  
+  cout << "Matching words:" << endl;
+  print_matching(words, search_phrase);
+  
+  return 0;
+}

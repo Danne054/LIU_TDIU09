@@ -1,0 +1,49 @@
+V "GNAT Lib v10"
+M P W=b
+P ZX
+
+RN
+RV NO_IO
+RV SPARK_05
+
+U first_program%b	first_program_student_version.adb  c6fea31f NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+
+D ada.ads		20230707070819 76789da1 ada%s
+D a-except.ads		20230707070819 a7106115 ada.exceptions%s
+D a-ioexce.ads		20230707070819 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20230707070819 119b8fb3 ada.streams%s
+D a-tags.ads		20230707070819 491b781d ada.tags%s
+D a-textio.ads		20230707070819 aef4d56d ada.text_io%s
+D a-unccon.ads		20230707070819 0e9b276f ada.unchecked_conversion%s
+D first_program_student_version.adb  20250903102711 680a7672 first_program%b
+D interfac.ads		20230707070819 5ab55268 interfaces%s
+D i-cstrea.ads		20230707070819 e53d8b8e interfaces.c_streams%s
+D system.ads		20230707070819 4635ec04 system%s
+D s-crtl.ads		20230707070819 0ebbdb71 system.crtl%s
+D s-exctab.ads		20230707070819 54135002 system.exception_table%s
+D s-ficobl.ads		20230707070819 078245e4 system.file_control_block%s
+D s-parame.ads		20230707070819 48ec542b system.parameters%s
+D s-secsta.ads		20230707070819 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20230707070819 a7318a92 system.soft_links%s
+D s-stache.ads		20230707070819 a37c21ec system.stack_checking%s
+D s-stalib.ads		20230707070819 09bd3940 system.standard_library%s
+D s-stoele.ads		20230707070819 2dc34a04 system.storage_elements%s
+D s-traent.ads		20230707070819 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20230707070819 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20230707070819 1b7d22d2 system.wch_con%s
+G a e
+G c Z b b [first_program standard 3 11 none]
+X 1 ada.ads
+16K9*Ada 20e8 8|1r6 1r45
+X 6 a-textio.ads
+57K13*Text_IO 727e16 8|1w10 1r49
+264U14*New_Line 8|8s4 25s4 36s4 46s4 54s4 60s4 65s4
+508U14*Put_Line 8|6s4 7s4 10s4 11s4 12s4 13s4 14s4 15s4 16s4 17s4 18s4 19s4
+. 20s4 21s4 22s4 23s4 24s4 27s4 28s4 29s4 30s4 31s4 32s4 33s4 34s4 35s4 38s4
+. 39s4 40s4 41s4 42s4 43s4 44s4 45s4 48s4 49s4 50s4 51s4 52s4 53s4 56s4 57s4
+. 58s4 59s4 62s4 63s4 64s4 67s4
+X 8 first_program_student_version.adb
+3U11*First_Program 3b11 68l5 68t18
+

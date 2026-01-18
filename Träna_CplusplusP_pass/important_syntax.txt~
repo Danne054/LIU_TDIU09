@@ -1,0 +1,445 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    vector<int> v = {1, 2, 3, 4, 5};
+
+    // Remove the element at index 2
+    v.erase(v.begin() + 2);
+
+    // Print the modified vector
+    for (auto i : v)
+        cout << i << " ";
+    return 0;
+}
+
+
+// Remove single element
+v.erase(pos);
+
+// Erase range of elements
+v.erase(first, last);
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    vector<int> v = {1, 2, 3, 4, 5};
+
+    // Remove the element at index 1
+    v.erase(v.begin() + 1);
+
+    for (auto i : v)
+        cout << i << " ";
+    return 0;
+}
+
+
+Output
+
+1 3 4 5
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    vector<int> v = {1, 2, 3, 4, 5};
+
+    // Remove the element at index 2
+    v.erase(v.begin() + 2);
+
+    // Print the modified vector
+    for (auto i : v)
+        cout << i << " ";
+    return 0;
+}
+
+Output
+
+1 2 4 5
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    vector<int> v = {1, 2, 3, 4, 5};
+
+    // Remove the last element
+    v.erase(v.end() - 1);
+
+    for (auto i : v)
+        cout << i << " ";
+    return 0;
+}
+
+Output
+
+1 2 3 4
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    vector<int> v = {1, 2, 3, 4, 5};
+
+    // Remove elements in the range [1, 4)
+    v.erase(v.begin() + 1, v.begin() + 4);
+
+    for (auto i : v)
+        cout << i << " ";
+    return 0;
+}
+
+
+Output
+
+1 5
+
+
+Explanation: The iterator to the part of the vector to be removed is passed to the vector erase() method. It removed that part from the array.
+Vector clear() and erase()
+
+In a vector, both vector clear() and vector erase() are used for element removal, but they serve different purposes. Following are the cases which describe when to use clear() and when to use erase():
+
+    If we have to remove all elements from the vector, then we use vector clear() method.
+    If we have to remove some specific elements from the vector, then we use vector erase() method
+
+---------------------------------------------------------------------------
+3 % 1 = 3 - (3*1) = 0
+
+om något är noll i denna blir det floating pint core dumped !!
+
+// 20 gåner 20 ruta med punkter 
+ painting.assign(20, vector<char>(20, '.'));
+
+// en-dimintionell vector med punkter
+
+ painting.assign(20, '.');
+
+//sorterar störst till minst för int:
+sort(begin(chips_cnt_sorted), end(chips_cnt_sorted), greater<int>());
+
+//sorterar minst till sörst:
+sort(begin(Vector_Fastest), end(Vector_Fastest));
+
+//tar bort alla likadana värden
+ Vector_Fastest.erase(unique(Vector_Fastest.begin(), Vector_Fastest.end()), Vector_Fastest.end());
+----------------------------------------------------------------------------------------------------
+
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    // Create a jagged 2D vector named vec
+    vector<vector<int>> vec = {{1, 2}, {5, 6, 7, 8}, {9},  {9, 8, 11}};
+
+    // Display the jagged array
+    for (int i = 0; i < vec.size(); i++)
+    {
+        cout << i << " -> ";
+        for (int j = 0; j < vec[i].size(); j++)
+        {
+            cout << vec[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+
+
+Output
+
+0 -> 1 2 
+1 -> 5 6 7 8 
+2 -> 9 
+3 -> 9 8 11 
+
+
+
+
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    
+    // empty 2D vector
+    vector<vector<int>> vec; 
+
+    // Adding rows dynamically
+    vec.push_back({1, 2, 3});
+    vec.push_back({4, 5, 6});
+
+    for (int i = 0; i < vec.size(); i++)
+    {
+        for (int j = 0; j < vec[i].size(); j++)
+        {
+            cout << vec[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+
+Output
+
+1 2 3 
+4 5 6 
+
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    // 3 rows, 4 columns, all elements initialized to 0
+    vector<vector<int>> vec(3, vector<int>(4, 0));
+
+    // Modifying elements
+    vec[0][0] = 5;
+    vec[2][3] = 10;
+
+    for (int i = 0; i < vec.size(); i++)
+    {
+        for (int j = 0; j < vec[i].size(); j++)
+        {
+            cout << vec[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+
+5 0 0 0 
+0 0 0 0 
+0 0 0 10 
+
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    // Directly initializing with values
+    vector<vector<int>> vec = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+
+    for (int i = 0; i < vec.size(); i++)
+    {
+        for (int j = 0; j < vec[i].size(); j++)
+        {
+            cout << vec[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+
+
+Output
+
+1 2 3 
+4 5 6 
+7 8 9 
+
+
+
+Basic Operations on 2D Vector
+1. Inserting Elements
+
+    Elements can be added to a 2D vector by inserting a new row using push_back().
+    Individual elements can also be added to an existing row by using push_back() on that specific row.
+
+#include <iostream.h>
+
+#include <vector>
+
+using namespace std;
+
+​
+
+int main()
+
+{
+
+    vector<vector<int>> v = {{1, 2, 3}, {4, 5, 6}};
+
+​
+
+    // Insert a new row at the end
+
+    v.push_back({7, 8, 9});
+
+​
+
+    // Insert value in 2nd row at 2nd position
+
+    v[1].insert(v[1].begin() + 1, 10);
+
+​
+
+    for (int i = 0; i < v.size(); i++)
+
+    {
+
+        for (int j = 0; j < v[i].size(); j++)
+
+        {
+
+            cout << v[i][j] << " ";
+
+        }
+
+        cout << endl;
+
+    }
+
+    return 0;
+
+}
+
+
+Output
+
+1 2 3 
+4 10 5 6 
+7 8 9
+
+
+
+2. Accessing and Updating Elements
+
+    As 2D vectors are organized like matrices with rows and columns, we need two indexes to access an element: one for the row number (i) and one for the column number (j).
+    We can access elements using the [] operator or the at() method.
+    The value of an accessed element can be updated by assigning a new value using the = operator.
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    vector<vector<int>> v = {{1, 2, 3}, {4, 5, 6}};
+
+    // Access 3rd element in 2nd row
+    cout << "3rd element in 2nd row: " << v[1][2] << endl;
+
+    // Access 2nd element in 1st row
+    cout << "2nd element in 1st row: " << v[0][1] << endl;
+
+    // Updating the 2nd element in 1st row
+    v[0][1] = 9;
+    cout << "2nd element in 1st row after updating: " << v[0][1] << endl;
+
+    return 0;
+}
+
+Output
+
+3rd element in 2nd row: 6
+2nd element in 1st row: 2
+2nd element in 1st row after updating: 9
+
+
+
+
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    vector<vector<int>> v = {{1, 2, 3}, {4, 5, 6}};
+
+    // Delete the second row
+    v.erase(v.begin() + 1);
+
+    // Delete second element in first row
+    v[0].erase(v[0].begin() + 1);
+
+    for (int i = 0; i < v.size(); i++)
+    {
+        for (int j = 0; j < v[i].size(); j++)
+        {
+            cout << v[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+
+Output
+
+1 3 
+
+
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    vector<vector<int>> v = {{1, 2, 3}, {4, 5, 6}};
+
+    // Loop through rows
+    for (int i = 0; i < v.size(); i++)
+    {
+
+        // Loop through columns
+        for (int j = 0; j < v[i].size(); j++)
+            cout << v[i][j] << " ";
+            
+        cout << endl;
+    }
+
+    return 0;
+}
+
+
+Output
+
+1 2 3 
+4 5 6 
+
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    // Creating a 2D vector
+    vector<vector<int>> vec = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+
+    // Finding the number of rows (size of the outer vector)
+    int rows = vec.size();
+    cout << "Number of rows: " << rows << endl;
+
+    // Finding the number of columns (size of any inner vector first row)
+    int cols = vec[0].size();
+    cout << "Number of columns: " << cols << endl;
+
+    return 0;
+}
+
+
+Output
+
+Number of rows: 3
+Number of columns: 3

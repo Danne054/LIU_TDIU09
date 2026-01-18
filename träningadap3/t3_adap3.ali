@@ -1,0 +1,98 @@
+V "GNAT Lib v10"
+M P W=b
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_FLOATING_POINT
+RV NO_IO
+RV SPARK_05
+
+U t3_adap3%b		t3_adap3.adb		76f484f3 NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+
+D ada.ads		20230707070819 76789da1 ada%s
+D a-except.ads		20230707070819 a7106115 ada.exceptions%s
+D a-flteio.ads		20230707070819 e18a47a0 ada.float_text_io%s
+D a-inteio.ads		20230707070819 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20230707070819 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20230707070819 119b8fb3 ada.streams%s
+D a-tags.ads		20230707070819 491b781d ada.tags%s
+D a-textio.ads		20230707070819 aef4d56d ada.text_io%s
+D a-tiflio.ads		20230707070819 bf196650 ada.text_io.float_io%s
+D a-tiinio.ads		20230707070819 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20230707070819 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20230707070819 5ab55268 interfaces%s
+D i-cstrea.ads		20230707070819 e53d8b8e interfaces.c_streams%s
+D system.ads		20230707070819 4635ec04 system%s
+D s-crtl.ads		20230707070819 0ebbdb71 system.crtl%s
+D s-exctab.ads		20230707070819 54135002 system.exception_table%s
+D s-ficobl.ads		20230707070819 078245e4 system.file_control_block%s
+D s-parame.ads		20230707070819 48ec542b system.parameters%s
+D s-secsta.ads		20230707070819 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20230707070819 a7318a92 system.soft_links%s
+D s-stache.ads		20230707070819 a37c21ec system.stack_checking%s
+D s-stalib.ads		20230707070819 09bd3940 system.standard_library%s
+D s-stoele.ads		20230707070819 2dc34a04 system.storage_elements%s
+D s-traent.ads		20230707070819 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20230707070819 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20230707070819 1b7d22d2 system.wch_con%s
+D t3_adap3.adb		20251105153548 cfc19f9a t3_adap3%b
+G a e
+G c Z b b [t3_adap3 standard 6 11 none]
+X 1 ada.ads
+16K9*Ada 20e8 27|2r6 2r33 3r6 3r33 4r6 4r33
+X 3 a-flteio.ads
+20K13*Float_Text_IO[9|46] 27|3w10 3r37
+X 4 a-inteio.ads
+18K13*Integer_Text_IO[10|46] 27|2w10 2r37
+X 8 a-textio.ads
+57K13*Text_IO 727e16 27|4w10 4r37
+86I12*Field{integer}
+273U14*Skip_Line 27|127s4
+381U14*Get 27|39s13 54s7 68s16
+392U14*Put 27|85s13 98s7 111s16
+454U14*Get 27|53s7
+465U14*Put 27|97s7 125s4 129s4
+X 9 a-tiflio.ads
+60U14*Get 27|42s10[3|20]
+82U14*Put 27|88s10[3|20]
+84i7 Fore{8|86I12} 27|88r23[3|20]
+85i7 Aft{8|86I12} 27|88r34[3|20]
+86i7 Exp{8|86I12} 27|88r44[3|20]
+X 27 t3_adap3.adb
+6U11*T3_Adap3 6b11 131l5 131t13
+8I12 Inner_Array_Range{integer} 19r12
+11I12 Outer_Array_Range1{integer} 28r12
+15I12 Outer_Array_Range2{integer} 28r32
+18A9 Inner_Array(float)<integer> 24r14 31r29 78r28
+21R9 Record_Type 25e17 28r55 48r29 93r28
+23a10 T{string} 53m16 97r16
+24a10 C{18A9} 55m16 99r16
+27A9 Outer_Array(21R9)<integer><integer> 59r29 102r28 121r8
+31U14 Get 31b14 31<18 46l8 46t11 55s7
+31a18 Item{18A9} 36r16 38r22 42m14 42r14
+32e7 Empty{character} 39m17
+36i11 I{integer} 38r18 42r19
+48U14 Get 48b14 48<18 57l8 57t11 71s13
+48r18 Item{21R9} 53m11 53r11 55m11 55r11
+50e7 Empty{character} 54m11
+59U14 Get 59b14 59<18 75l8 75t11 126s4
+59a18 Item{27A9} 64r24 65r19 67r25 67r46 71m17 71r17
+61e7 Empty{character} 68m20
+64i11 X{integer} 67r21 71r22
+65i14 Y{integer} 67r42 71r24
+78U14 Put 78b14 78>18 90l8 90t11 99s7
+78a18 Item{18A9} 82r24 84r22 88r14
+82i11 I{integer} 84r18 88r19
+93U14 Put 93b14 93>18 100l8 100t11 114s13
+93r18 Item{21R9} 97r11 99r11
+102U14 put 102b14 102>18 118l8 118t11 130s4
+102a18 Item{27A9} 107r24 108r19 110r25 110r46 114r17
+107i11 X{integer} 110r21 114r22
+108i14 Y{integer} 110r42 114r24
+121a4 T{27A9} 126m8 130r8
+

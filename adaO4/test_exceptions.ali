@@ -1,0 +1,142 @@
+V "GNAT Lib v10"
+M P W=b
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV SPARK_05
+
+U test_exceptions%b	test_exceptions.adb	71bf2914 NE OO SU
+W ada%s			ada.ads			ada.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z system%s		system.ads		system.ali
+Z system.concat_3%s	s-conca3.adb		s-conca3.ali
+Z system.exception_table%s  s-exctab.adb	s-exctab.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+Z system.val_int%s	s-valint.adb		s-valint.ali
+
+D ada.ads		20230707070819 76789da1 ada%s
+D a-except.ads		20230707070819 a7106115 ada.exceptions%s
+D a-flteio.ads		20230707070819 e18a47a0 ada.float_text_io%s
+D a-inteio.ads		20230707070819 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20230707070819 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20230707070819 119b8fb3 ada.streams%s
+D a-tags.ads		20230707070819 491b781d ada.tags%s
+D a-textio.ads		20230707070819 aef4d56d ada.text_io%s
+D a-tiflio.ads		20230707070819 bf196650 ada.text_io.float_io%s
+D a-tiinio.ads		20230707070819 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20230707070819 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20230707070819 5ab55268 interfaces%s
+D i-cstrea.ads		20230707070819 e53d8b8e interfaces.c_streams%s
+D system.ads		20230707070819 4635ec04 system%s
+D s-conca3.ads		20230707070819 0b705ca5 system.concat_3%s
+D s-crtl.ads		20230707070819 0ebbdb71 system.crtl%s
+D s-exctab.ads		20230707070819 54135002 system.exception_table%s
+D s-ficobl.ads		20230707070819 078245e4 system.file_control_block%s
+D s-parame.ads		20230707070819 48ec542b system.parameters%s
+D s-secsta.ads		20230707070819 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20230707070819 a7318a92 system.soft_links%s
+D s-stache.ads		20230707070819 a37c21ec system.stack_checking%s
+D s-stalib.ads		20230707070819 09bd3940 system.standard_library%s
+D s-stoele.ads		20230707070819 2dc34a04 system.storage_elements%s
+D s-traent.ads		20230707070819 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20230707070819 34867c83 system.unsigned_types%s
+D s-valint.ads		20230707070819 b5ff6963 system.val_int%s
+D s-wchcon.ads		20230707070819 1b7d22d2 system.wch_con%s
+D test_exceptions.adb	20251117155302 c88a327d test_exceptions%b
+G a e
+G c Z b b [test_exceptions standard 7 11 none]
+X 1 ada.ads
+16K9*Ada 20e8 29|3r6 3r31 4r6 4r31 5r6 5r31
+X 3 a-flteio.ads
+20K13*Float_Text_IO[9|46] 29|5w10 5r35
+X 4 a-inteio.ads
+18K13*Integer_Text_IO[10|46] 29|4w10 4r35
+X 8 a-textio.ads
+57K13*Text_IO 727e16 29|3w10 3r35
+86I12*Field{integer}
+264U14*New_Line 29|340s13
+273U14*Skip_Line 29|80s16 106s7 161s7 336s13 379s13
+282V13*End_Of_Line{boolean} 29|139s13
+381U14*Get 29|130s10 143s10
+392U14*Put 29|306s10 318s7 321s7
+465U14*Put 29|40s10 64s7 66s7 73s7 81s16 85s13 88s13 101s7 108s7 156s7 158s7
+. 332s7 338s13 345s16 347s16 349s16 351s16 377s13 384s16
+508U14*Put_Line 29|34s7 35s7 36s7 37s7 43s10 110s7 163s7 391s10
+548X4*Data_Error 29|79r18
+X 10 a-tiinio.ads
+59U14*Get 29|41s10[4|18] 77s13[4|18] 102s7[4|18] 103s7[4|18] 378s13[4|18]
+80U14*Put 29|63s7[4|18] 65s7[4|18] 109s7[4|18] 157s7[4|18] 309s7[4|18] 317s7[4|18]
+82i7 Width{8|86I12} 29|63r16[4|18] 65r16[4|18] 109r18[4|18] 157r19[4|18]
+. 309r18[4|18] 317r19[4|18]
+X 29 test_exceptions.adb
+7U11*Test_Exceptions 7b11 395l5 395t20
+10X4 Length_Error 140r19 295r15 383r18
+11X4 Format_Error 281r19 296r19 344r18
+12X4 Year_Error 287r19 346r18
+13X4 Mounth_Error 289r19 348r18
+14X4 Day_Error 291r19 350r18
+17R9 Date_Type 20e17 198r43 209r40 221r42 233r36 247r39 272r29 313r29 329r14
+19i10 Y{integer} 203m12 213r20 213r39 237r18 238r23 238r47 317r16
+19i13 M{integer} 204m12 225r20 225r36 255r15 262r20 262r34 262r48 262r62
+. 320r32
+19i16 D{integer} 205m12 251r20 251r36 257r19 258r21 263r28 323r32
+29V13 Menu_Selection{integer} 29b13 47l8 47t22 370s17
+31i7 N{integer} 41m14 42r20 46r14
+59U14 put_min_max 59b14 59>26 59>31 67l8 67t19 75s10
+59i26 Min{integer} 63r11
+59i31 Max{integer} 65r11
+69U14 Get_Safe 69b14 69<23 70>23 70>28 93l8 93t16 105s7
+69i23 Value{integer} 77m17 84r13 87r16
+70i23 min{integer} 75r22 84r21
+70i28 max{integer} 75r27 87r24
+96U14 Upg1 96b14 111l8 111t12 373s10
+98i7 Value{integer} 105m16 109r11
+98i14 Min{integer} 102m11 105r23
+98i19 Max{integer} 103m11 105r28
+124U14 Get_Correct_String 124b14 124<33 147l8 147t26 160s7 278s10
+124a33 S{string} 135m7 135r9 137r16 137r31 145m10
+126e7 C{character} 130m14 132r20 135r21 143m14 145r18
+137i11 I{integer} 145r12
+150U14 Upg2 150b14 150>19 164l8 164t12 381s13
+150i19 Length{integer} 152r23 157r11
+152a7 S{string} 160m26 163r44
+176V13 Find_Format_Error{boolean} 176b13 176>32 194l8 194t25 280s13
+176a32 S{string} 178r30
+178a7 Str{string} 181r10 181r27 187r21
+185i11 I{integer} 186r15 186r30 186r45 187r25
+197U14 String_To_Integer 197b14 197>32 198<32 206l8 206t25 284s10
+197a32 S{string} 200r30
+198r32 Item{17R9} 203m7 204m7 205m7
+200a7 Str{string} 203r31 204r31 205r31
+209V13 Find_Year_Error{boolean} 209b13 209>30 218l9 218t24 286s13
+209r30 Item{17R9} 213r15 213r34
+221V13 Find_Mounth_Error{boolean} 221b13 221>32 230l9 230t26 288s16
+221r32 Item{17R9} 225r15 225r31
+233V13 Is_Leap_Year{boolean} 233b13 233>26 244l8 244t20 258s36
+233r26 Item{17R9} 237r13 238r18 238r42
+247V13 Find_Day_Error{boolean} 247b13 247>29 269l9 269t23 290s16
+247r29 Item{17R9} 251r15 251r31 255r10 257r14 258r16 258r49 262r15 262r29
+. 262r43 262r57 263r23
+272U14 Get 272b14 272<18 298l8 298t11 335s13
+272r18 Item{17R9} 284m31 286r29 288r34 290r31
+274a7 S{string} 278m29 280r31 284r28
+301U14 Put_And_Add_Zero_If 301b14 301>35 310l8 310t27 320s7 323s7
+301i35 Value{integer} 305r10 309r11
+313U14 Put 313b14 313>19 324l8 324t11 339s13
+313r19 Item{17R9} 317r11 320r27 323r27
+327U14 Upg3 327b14 354l8 354t12 388s10
+329r7 Date{17R9} 335m17 339r17
+366i4 Choice{integer} 370m7 372r10 375r13 387r13
+366i12 Length{integer} 378m17 381r18
+

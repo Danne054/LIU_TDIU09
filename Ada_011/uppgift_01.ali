@@ -1,0 +1,91 @@
+V "GNAT Lib v10"
+M P W=b
+P ZX
+
+RN
+RV NO_FLOATING_POINT
+RV NO_IO
+RV SPARK_05
+
+U uppgift_01%b		uppgift_01.adb		78a61056 NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+
+D ada.ads		20230707070819 76789da1 ada%s
+D a-except.ads		20230707070819 a7106115 ada.exceptions%s
+D a-flteio.ads		20230707070819 e18a47a0 ada.float_text_io%s
+D a-inteio.ads		20230707070819 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20230707070819 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20230707070819 119b8fb3 ada.streams%s
+D a-tags.ads		20230707070819 491b781d ada.tags%s
+D a-textio.ads		20230707070819 aef4d56d ada.text_io%s
+D a-tiflio.ads		20230707070819 bf196650 ada.text_io.float_io%s
+D a-tiinio.ads		20230707070819 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20230707070819 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20230707070819 5ab55268 interfaces%s
+D i-cstrea.ads		20230707070819 e53d8b8e interfaces.c_streams%s
+D system.ads		20230707070819 4635ec04 system%s
+D s-crtl.ads		20230707070819 0ebbdb71 system.crtl%s
+D s-exctab.ads		20230707070819 54135002 system.exception_table%s
+D s-ficobl.ads		20230707070819 078245e4 system.file_control_block%s
+D s-parame.ads		20230707070819 48ec542b system.parameters%s
+D s-secsta.ads		20230707070819 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20230707070819 a7318a92 system.soft_links%s
+D s-stache.ads		20230707070819 a37c21ec system.stack_checking%s
+D s-stalib.ads		20230707070819 09bd3940 system.standard_library%s
+D s-stoele.ads		20230707070819 2dc34a04 system.storage_elements%s
+D s-traent.ads		20230707070819 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20230707070819 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20230707070819 1b7d22d2 system.wch_con%s
+D uppgift_01.adb	20250905091117 c1930b3f uppgift_01%b
+G a e
+G c Z b b [uppgift_01 standard 5 11 none]
+X 1 ada.ads
+16K9*Ada 20e8 27|2r6 2r39 3r6 3r39 4r6 4r39 11r4 12r4 13r4 14r4 18r4 19r4
+. 20r4 21r4 22r4 23r4 24r4 25r4 26r4 27r4 28r4 29r4 30r4 31r4 32r4 33r4 38r4
+. 39r4 40r4 41r4 46r4 47r4 48r4 49r4 52r4 53r4 66r4 68r4 74r4 76r4 81r4 82r4
+. 83r4 84r4 88r4 94r4 95r4 96r4 98r4 99r4 100r4 101r4 105r4 107r4 108r4 115r4
+. 117r4 118r4
+X 3 a-flteio.ads
+20K13*Float_Text_IO[9|46] 27|2w10 2r43 39r8 41r8 48r8 53r8 96r8 99r8
+X 4 a-inteio.ads
+18K13*Integer_Text_IO[10|46] 27|3w10 3r43 12r8 14r8 19r8 21r8 23r8 24r8 26r8
+. 27r8 29r8 30r8 32r8 33r8 47r8 82r8 88r8
+X 8 a-textio.ads
+57K13*Text_IO 727e16 27|4w10 4r43 11r8 13r8 18r8 20r8 22r8 25r8 28r8 31r8
+. 38r8 40r8 46r8 49r8 52r8 66r8 68r8 74r8 76r8 81r8 83r8 84r8 94r8 95r8 98r8
+. 100r8 101r8 105r8 107r8 108r8 115r8 117r8 118r8
+86I12*Field{integer}
+264U14*New_Line 27|15s4 35s4 42s4 51s4 54s4 62s4 70s4 78s4 92s4 103s4 109s4
+273U14*Skip_Line 27|16s4 34s4 43s4 55s4 63s4 71s4 79s4 85s4 97s4 112s7
+381U14*Get 27|59s4 83s16
+392U14*Put 27|61s4
+454U14*Get 27|67s4 75s4 84s16 95s16
+465U14*Put 27|11s16 13s16 18s16 20s16 22s16 25s16 28s16 31s16 38s16 40s16
+. 46s16 49s16 52s16 58s4 60s4 66s16 68s16 69s4 74s16 76s16 77s4 81s16 87s4
+. 89s4 90s4 91s4 94s16 98s16 100s16 101s16 102s4 105s16 107s16 108s16 115s16
+. 117s16 118s16
+481U14*Get_Line 27|106s4 116s4
+X 9 a-tiflio.ads
+60U14*Get 27|39s22[3|20] 48s22[3|20] 96s22[3|20]
+82U14*Put 27|41s22[3|20] 53s22[3|20] 99s22[3|20]
+84i7 Fore{8|86I12} 27|41r29[3|20] 53r29[3|20] 99r29[3|20]
+85i7 Aft{8|86I12} 27|41r40[3|20] 53r40[3|20] 99r40[3|20]
+86i7 Exp{8|86I12} 27|41r49[3|20] 53r49[3|20] 99r49[3|20]
+X 10 a-tiinio.ads
+59U14*Get 27|12s24[4|18] 19s24[4|18] 23s24[4|18] 26s24[4|18] 29s24[4|18]
+. 32s24[4|18] 47s24[4|18] 82s24[4|18]
+80U14*Put 27|14s24[4|18] 21s24[4|18] 24s24[4|18] 27s24[4|18] 30s24[4|18]
+. 33s24[4|18] 50s4[4|18] 88s24[4|18]
+82i7 Width{8|86I12} 27|14r31[4|18] 50r10[4|18] 88r31[4|18]
+X 27 uppgift_01.adb
+5U11*Uppgift_01 5b11 119l5 119t15
+6a4 S{string} 59m8 59r8 61r8 67m8 67r8 69r8 75m8 75r8 77r8 84m20 84r20 90r8
+. 95m20 95r20 101r20 106m13 108r20 111r7 116m13 118r20
+7i4 n{integer} 12m28 14r28 19m28 21r28 23m28 24r28 26m28 27r28 29m28 30r28
+. 32m28 33r28 47m28 50r8 82m28 88r28 106m16 108r25 111r18 116m16 118r25
+8f4 F{float} 39m26 41r26 48m26 53r26 96m26 99r26
+9e4 C{character} 83m20
+
