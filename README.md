@@ -1,1 +1,1 @@
-Notera att koden i filerna inte är helt perfekt, det var tillräckligt bra för att klara diverse uppgift.
+Notera att koden i filerna inte är bra skrivet och kan innehålla buggar, det var helt enkelt tillräckligt bra för att klara av uppgifterna.
